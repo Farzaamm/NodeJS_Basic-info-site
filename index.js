@@ -1,5 +1,6 @@
 const http = require('http');
 const fs = require('fs');
+const PORT = process.env.PORT;
 
 http.createServer((req, res) => {
     res.writeHead(200, { 'Content-Type': 'text/html' });
@@ -40,6 +41,6 @@ http.createServer((req, res) => {
             }
         });
     }
-}).listen(8080);
+}).listen(PORT);
 
 console.log('Server running at http://127.0.0.1:8080/'); 
